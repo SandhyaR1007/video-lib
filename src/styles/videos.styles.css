@@ -1,0 +1,36 @@
+.videosContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+}
+.videoCard {
+  width: calc(100% / 4 - 20px);
+  height: max-content;
+  padding: 10px;
+}
+.videoCard__header {
+  position: relative;
+}
+.videoCard__header img {
+  width: 100%;
+
+  border-radius: var(--border-radius-lg);
+  height: min-content;
+}
+.videoCard__header span {
+  position: absolute;
+  color: var(--white-color);
+  bottom: 10px;
+  background-color: var(--hot-pink);
+  right: 5px;
+  padding: 0.2rem;
+  border-radius: var(--border-radius-md);
+  font-size: var(--font-sm);
+}
+.videoCard__title {
+  color: var(--white-color);
+  font-size: var(--font-lg);
+  font-weight: bold;
+  padding: 0.3rem 0;
+}
