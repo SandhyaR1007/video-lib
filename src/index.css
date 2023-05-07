@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Kodchasan:wght@300;400;700&display=swap");
+:root {
+  --theme-color: #e573ff;
+  --primary-black: #0d0c0f;
+  --secondary-black: #1c1e1f;
+  --primary-gray: #d3d3d3;
+  --secondary-gray: #808080;
+  --white-color: #ffffff;
+  --black-color: #000000;
+  --hot-pink: #f20f89;
+
+  --primary-font: "Kodchasan", sans-serif;
+  --secondary-font: "Inter", sans-serif;
+
+  --font-xs: 10px;
+  --font-sm: 12px;
+  --font-md: 16px;
+  --font-lg: 20px;
+  --font-xl: 14px;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: var(--secondary-font);
+  background-color: var(--primary-black);
+  color: var(--primary-gray);
+}
+li {
+  list-style: none;
+}
