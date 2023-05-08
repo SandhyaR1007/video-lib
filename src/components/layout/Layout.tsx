@@ -13,10 +13,11 @@ export const Layout = () => {
       <Actionbar />
       <Categories />
       <div className="layout__content">
-        <Routes>
+        <Home />
+        {/* <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/liked" element={<Liked />} />
-        </Routes>
+        </Routes> */}
       </div>
     </div>
   );

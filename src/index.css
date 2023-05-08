@@ -18,11 +18,15 @@
   --font-md: 1rem;
   --font-lg: 1.25rem;
   --font-xl: 1.5rem;
+  --font-xxl: 2rem;
 
   --border-radius-sm: 3px;
   --border-radius-md: 7px;
   --border-radius-lg: 15px;
   --border-radius-full: 50%;
+}
+html {
+  overflow-x: hidden;
 }
 * {
   box-sizing: border-box;
