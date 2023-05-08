@@ -1,12 +1,11 @@
 .videosContainer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  padding: 10px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
 }
 .videoCard {
-  flex: 1;
-  height: max-content;
   padding: 10px;
 }
 .videoCard__header {
@@ -14,18 +13,18 @@
 }
 .videoCard__header img {
   width: 100%;
-
   border-radius: var(--border-radius-lg);
-  height: min-content;
+  height: 200px;
+  object-fit: cover;
 }
 .videoCard__header span {
   position: absolute;
   color: var(--white-color);
   bottom: 10px;
   background-color: var(--hot-pink);
-  right: 5px;
+  right: 2px;
   padding: 0.2rem;
-  border-radius: var(--border-radius-md);
+  border-radius: var(--border-radius-sm);
   font-size: var(--font-xs);
 }
 .videoCard__title {
