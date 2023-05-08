@@ -121,7 +121,8 @@
     right: 0;
     background-color: var(--transparent-black);
     z-index: 2;
-    box-shadow: rgba(255, 255, 255, 0.55) 0px 48px 100px 0px;
+    box-shadow: rgba(255, 255, 255, 0.55) 0px 45px 100px 0px;
+    border-top: 01px solid rgba(255, 255, 255, 0.05);
   }
   .sidebar h3 {
     display: none;
