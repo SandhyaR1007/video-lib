@@ -8,6 +8,10 @@ const Categories = () => {
         <li>Redux</li>
         <li>Node</li>
         <li>New</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Redux</li>
+        <li>Node</li>
       </ul>
     </div>
   );

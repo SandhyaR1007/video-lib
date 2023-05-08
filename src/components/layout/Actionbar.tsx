@@ -1,4 +1,3 @@
-import Categories from "./Categories";
 import Search from "./Search";
 
 const Actionbar = () => {
@@ -9,7 +8,6 @@ const Actionbar = () => {
       <div className="actionbar__profile">
         <span>Profile</span>
       </div>
-      <Categories />
     </nav>
   );
 };

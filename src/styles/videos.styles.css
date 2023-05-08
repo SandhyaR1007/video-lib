@@ -5,7 +5,7 @@
   padding: 10px;
 }
 .videoCard {
-  width: calc(100% / 4 - 20px);
+  flex: 1;
   height: max-content;
   padding: 10px;
 }
@@ -26,11 +26,11 @@
   right: 5px;
   padding: 0.2rem;
   border-radius: var(--border-radius-md);
-  font-size: var(--font-sm);
+  font-size: var(--font-xs);
 }
 .videoCard__title {
   color: var(--white-color);
-  font-size: var(--font-lg);
+  font-size: var(--font-md);
   font-weight: bold;
   padding: 0.3rem 0;
 }

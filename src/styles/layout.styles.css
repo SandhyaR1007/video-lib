@@ -1,10 +1,13 @@
 .layout {
   display: grid;
   grid-template-columns: 70px 1fr;
+  grid-template-rows: auto auto 1fr;
+  grid-template-areas: "sidebar actionbar" "sidebar categories" "sidebar content";
 }
 
 /* sidebar */
 .sidebar {
+  grid-area: sidebar;
   padding: 1rem 0;
   display: flex;
   flex-direction: column;
@@ -28,13 +31,15 @@
 
 /* actionbar */
 .actionbar {
+  grid-area: actionbar;
   display: grid;
-
-  grid-template-rows: 1fr auto;
+  grid-template-rows: auto auto;
   grid-template-columns: 2fr 3fr 2fr;
+
   gap: 20px;
   color: var(--white-color);
   padding: 1rem;
+  max-width: 100vw;
 }
 .actionbar__logo {
   font-size: var(--font-lg);
@@ -57,14 +62,17 @@
   width: 100%;
   color: var(--primary-gray);
 }
-
+.actionbar__profile {
+}
 .categories {
+  grid-area: categories;
   grid-row: span 1;
   display: flex;
+  max-width: 100vw;
   /* flex-wrap: wrap; */
   align-items: center;
   /* border: 1px solid white; */
-  /* overflow-x: scroll; */
+  overflow-x: scroll;
 }
 
 .categories li {
@@ -78,4 +86,47 @@
 }
 .categories li:first-child {
   background-color: var(--hot-pink);
+}
+.categories::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+.layout__content {
+  grid-area: content;
+}
+
+@media screen and (max-width: 500px) {
+  .layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "actionbar" "categories" "content" "sidebar";
+  }
+  .sidebar {
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--transparent-black);
+    z-index: 2;
+    box-shadow: rgba(255, 255, 255, 0.55) 0px 48px 100px 0px;
+  }
+  .sidebar h3 {
+    display: none;
+  }
+  .sidebar__items {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0;
+  }
+  .sidebar__items li {
+    padding: 0.2rem;
+  }
+  .sidebar__items li:hover {
+    border-left: none;
+    filter: drop-shadow(0px 0px 5px var(--transparent-black));
+  }
 }
