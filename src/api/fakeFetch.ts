@@ -103,6 +103,6 @@ export const getVideosApi = (url: string): Promise<VideosResponse> => {
           message: "Video list not found.",
         });
       }
-    }, 2000);
+    }, 5000);
   });
 };

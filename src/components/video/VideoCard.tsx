@@ -13,7 +13,7 @@ const VideoCard = ({ video }: Props) => {
 
       <p className="videoCard__title">{video.title}</p>
       <p>
-        <span>127K views</span> . <span>2 months ago</span>
+        <span>127K views</span> • <span>2 months ago</span>
       </p>
     </div>
   );

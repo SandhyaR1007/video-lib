@@ -3,12 +3,14 @@ import "@/styles/videos.styles.css";
 import { useVideosContext } from "../hooks/hooks";
 
 const Home = () => {
-  const { videosData } = useVideosContext();
+  const { videosData, loading } = useVideosContext();
   return (
     <div className="videosContainer">
-      {videosData.map((video) => (
-        <VideoCard video={video} key={video.id} />
-      ))}
+      {loading ? (
+        <h3>Loading</h3>
+      ) : (
+        videosData.map((video) => <VideoCard video={video} key={video.id} />)
+      )}
     </div>
   );
 };
