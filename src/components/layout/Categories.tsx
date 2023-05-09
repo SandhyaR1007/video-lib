@@ -5,6 +5,7 @@ const Categories = () => {
   const ref = useRef<HTMLUListElement>(null);
   const [showPreviousIcon, setShowPreviousIcon] = useState<boolean>(false);
   const [showNextIcon, setShowNextIcon] = useState<boolean>(true);
+
   useEffect(() => {
     const container = ref.current;
     container?.addEventListener("scroll", handleShowIcons);
@@ -15,22 +16,13 @@ const Categories = () => {
   const handleShowIcons = () => {
     const container = ref.current;
     const scrollPosition = container?.scrollLeft;
-    console.log(
-      scrollPosition,
-      container?.clientLeft,
-      container?.clientWidth,
-      container?.scrollWidth
-    );
-    console.log(
-      container && container?.scrollWidth - container?.clientWidth,
-      scrollPosition
-    );
+
     setShowPreviousIcon(scrollPosition ? scrollPosition > 0 : false);
-    setShowNextIcon(
-      scrollPosition
-        ? scrollPosition <= container.scrollWidth - container.clientWidth
-        : false
-    );
+    // setShowNextIcon(
+    //   scrollPosition
+    //     ? scrollPosition <= container.scrollWidth - container.clientWidth
+    //     : false
+    // );
   };
 
   const scroll = (scrollOffset: number) => {
@@ -44,6 +36,7 @@ const Categories = () => {
           onClick={() => scroll(-100)}
         />
       )}
+
       <ul className="categories__items" ref={ref}>
         <li>All</li>
         <li>JavaScript</li>
@@ -75,7 +68,7 @@ const Categories = () => {
       {showNextIcon && (
         <AiOutlineRight
           className="categories__arrow"
-          onClick={() => scroll(20)}
+          onClick={() => scroll(100)}
         />
       )}
     </div>

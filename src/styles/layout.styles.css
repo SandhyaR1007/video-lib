@@ -8,11 +8,14 @@
 /* sidebar */
 .sidebar {
   grid-area: sidebar;
-  padding: 1rem 0;
+  padding: 1.5rem 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* border: 1px solid white; */
+  background-color: #080808;
+  position: fixed;
+  top: 0;
+  bottom: 0;
 }
 .sidebar__items {
   padding: 0.5rem 0;
@@ -20,8 +23,9 @@
 }
 .sidebar__items li {
   padding: 1rem;
-  font-size: var(--font-lg);
+  font-size: var(--font-xl);
   cursor: pointer;
+  border-left: 2px solid transparent;
 }
 .sidebar__items li:hover {
   border-left: 2px solid var(--theme-color);
@@ -75,19 +79,26 @@
   display: flex;
   overflow-x: scroll;
   scroll-behavior: smooth;
+  max-width: 85vw;
+  padding: 0 1rem;
 }
 .categories__items::-webkit-scrollbar {
   display: none;
 }
 .categories__items li {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.5rem;
   font-size: var(--font-sm);
   font-weight: bold;
   font-family: var(--primary-font);
   background-color: var(--transparent-black);
   margin: 0.5rem;
-  border-radius: var(--border-radius-md);
+  border-radius: var(--border-radius-tablet);
   white-space: nowrap;
+  cursor: pointer;
+}
+.categories__items li:hover {
+  background-color: rgba(62, 62, 62, 0.9);
+  transition: background-color 0.2s ease-in;
 }
 .categories__items li:first-child {
   background-color: var(--hot-pink);
@@ -116,13 +127,14 @@
     flex-direction: row;
     justify-content: space-between;
     position: fixed;
+    top: 90vh;
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: var(--transparent-black);
+    /* background-color: var(--transparent-black); */
     z-index: 2;
     box-shadow: rgba(255, 255, 255, 0.55) 0px 45px 100px 0px;
-    border-top: 01px solid rgba(255, 255, 255, 0.05);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
   }
   .sidebar h3 {
     display: none;
@@ -135,9 +147,13 @@
   }
   .sidebar__items li {
     padding: 0.2rem;
+    border: none;
   }
   .sidebar__items li:hover {
     border-left: none;
-    filter: drop-shadow(0px 0px 5px var(--transparent-black));
+    filter: drop-shadow(0px 0px 2px var(--transparent-black));
+  }
+  .categories__items {
+    max-width: 80vw;
   }
 }

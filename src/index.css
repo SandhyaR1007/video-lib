@@ -8,7 +8,7 @@
   --white-color: #ffffff;
   --black-color: #000000;
   --hot-pink: #f20f89;
-  --transparent-black: #1c1e1f;
+  --transparent-black: #ffffff1a;
 
   --primary-font: "Kodchasan", sans-serif;
   --secondary-font: "Inter", sans-serif;
@@ -23,6 +23,7 @@
   --border-radius-sm: 3px;
   --border-radius-md: 7px;
   --border-radius-lg: 15px;
+  --border-radius-tablet: 50px;
   --border-radius-full: 50%;
 }
 html {
