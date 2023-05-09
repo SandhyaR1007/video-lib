@@ -1,0 +1,2 @@
+export const SET_VIDEOS_DATA = "SET_VIDEOS_DATA";
+export const TOGGLE_LOADING = "TOGGLE_LOADING";
